@@ -35,3 +35,7 @@
 
 * Github
 - Uma plataforma para hospedar repositórios git e permitir a colaboração de desenvovedores em projetos /open-source/.
+
+* Links úteis
+- [[https://git-scm.com/doc][Documentação do git]]
+- [[https://docs.github.com/][Documentação do GitHub]]
