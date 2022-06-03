@@ -1,0 +1,23 @@
+#+title: Pensamento Computacional
+
+* O que é?
+Expressar a solução de problemas como uma /sequência de passos/, um *algoritmo*.
+- É sistemático
+- Utilizado em várias áreas do conhecimento
+
+* Pilares
+- *Decomposição*: dividir um problema complexo em subproblemas, que são fáceis de gerenciar
+
+- *Reconhecimento de padrões*: identificar tendências/similaridades entre problemas em contextos distintos. Favorece a abstração.
+
+- *Abstração*: extrapolar um conceito para uma forma generalista
+
+- *Design de Algoritmos*: definir passo a passo para resolver um problema
+
+* Habilidades Complementares
+- *Raciocínio Lógico*: pensamento estruturado que permite encontrar a resolução de um problema
+  a) *indução*: elaborar leis e teorias a partir da observação de um fenômeno
+  b) *dedução*: à partir de leis e teorias se descreve um fenômeno (oposto da indução)
+  c) *abdução*: à partir de uma conclusão se obtém uma premissa
+
+- *Aperfeiçoamento*: aprimorar a solução, otimizando recursos, simplificar processos, ...

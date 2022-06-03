@@ -1,0 +1,37 @@
+#+title: Git e Github
+
+* Git
+- Ferramenta de *versionamento de código*
+- É *distribuído*: uma cópia local do repositório pode ser criada por cada desenvolvedor. O dev pode realizar mudanças offline sem depender de um repositório centralizado como em outros SCMs.
+
+** Funcionamento do Git
+- Basicamente o Git é um [[https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain][sistema de arquivo enderessável por conteúdo]] com uma interface de um VCS (/version control system/).
+*** Ciclo de vida
+- Conforme os arquivos do repositório são criados, editados ou removidos, eles passam pelos seguintes estados:
+
+[[https://git-scm.com/book/en/v2/images/lifecycle.png]]
+
+*** Tipos de objetos
+- *Blobs*: objetos mais básicos. Armazenam apenas conteúdo de um arquivo do repositório.
+- *Trees*: objetos que apontam para /blobs/ ou outras /trees/. Armazenam o nome do arquivo representado pelo /blob/ ou o nome do diretório representado pela /tree/.
+
+  [[https://git-scm.com/book/en/v2/images/data-model-1.png]]
+
+- *Commits*: um snapshot da área de stage com identificação do autor do commit, timestamp, mensagem, commit anterior e conteúdo (tree que o compõe).
+
+  [[https://git-scm.com/book/en/v2/images/data-model-3.png]]
+
+
+** Comandos básicos
+- Inicializar repo local: ~git init~
+- Clonar repo remoto para local: ~git clone <URL>~
+- Adicionar arquivo para a /staging area/: ~git add <FILE>~
+- Realizar /commit/: ~git commit -m "MSG"~
+- Mudar para outro /branch/: ~git checkout [-b] <BRANCH>~
+- Sincronizar repo local com upstream: ~git pull <REPO>~
+- Enviar /branch/ local para repo remoto: ~git push <REPO> <REF>~
+- Consutar status do repo: ~git status~
+- Consultar histórico de commits: ~git log~
+
+* Github
+- Uma plataforma para hospedar repositórios git e permitir a colaboração de desenvovedores em projetos /open-source/.
