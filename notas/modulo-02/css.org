@@ -1,0 +1,90 @@
+#+title: CSS
+
+O CSS é uma linguagem de folha de estilos para a Web. Com o CSS é possível configurar diversas propriedades relativas ao estilo e layout dos elementos de um documento HTML, como posição, tamanho, cor, etc.
+
+* Estrutura básica
+Uma folha de estilos é composta por várias regras. Cada regra é composta de um seletor e um bloco de declarações. Cada declarações é da forma ~propriedade: valor;~.
+
+#+begin_src css
+  h1 {
+    color: blue;
+  }
+#+end_src
+
+* Carregando regras CSS no documento HTML
+Há três maneiras de estilizar elementos HTML.
+1) /Inline Styles/:
+   Declarações de estilo escritas na propriedade /style/ das tags HTML.
+   #+begin_src html
+     <h1 style="color: red; font-size: 36px">Hello CSS!</h1>
+   #+end_src
+
+2) /Internal Stylesheet/:
+   Regras CSS escritas dentro da tag ~<style></style>~.
+   #+begin_src html
+     <head>
+       <style>
+         p {
+           font-size: 16px;
+         }
+       </style>
+     </head>
+   #+end_src
+
+3) /External Stylesheet/:
+   Regras CSS escritas em arquivos externos que são carregados pelo documento HTML. No exemplo abaixo, o documento carrega a folha de estilos declarada no arquivo ~styles.css~ que está no mesmo diretório.
+   #+begin_src html
+     <head>
+       <link rel="stylesheet" href="styles.css">
+     </head>
+   #+end_src
+
+* Seletores
+Há diversas maneiras de se especificar um seletor em uma regra. Dentre elas estão:
+- Pela classe:
+  Caracter ponto (~.~) seguido do nome da classe. No exemplo abaixo, a regra se aplica a todos os elementos declarados com a propriedade ~class="special"~.
+   #+begin_src css
+     .special {
+         color: red;
+     }
+   #+end_src
+
+- Pelo ID:
+  Caracter /hash/ (~#~) seguido pelo ID do elemento. No exemplo abaixo, a regra se aplica ao elemento do documento que possui a propriedade ~id="main-title"~.
+  #+begin_src css
+    #main-title {
+        font-size: 42px;
+    }
+  #+end_src
+
+- Pela posição:
+  - /Nested/:
+    Selecionar um elemento que é filho de outro. Os seletores são separados por espaço. No exemplo abaixo, a regra se aplica a todos os elementos ~<span>~ que estão dentro de um elemento ~<p>~ que estão dentro de um ~<article>~.
+    #+begin_src css
+      article p span {
+          color: black;
+      }
+    #+end_src
+
+  - /Adjacent Sibbling Combinator/:
+    Selecionar um elemento que vem logo após um outro. Os seletores são separados por ~+~. No exemplo abaixo, a regra se aplica a todos os elementos ~<img>~ que vêm logo após um ~<p>~, no mesmo nível.
+    #+begin_src css
+      p + img {
+          border: 1px solid black;
+      }
+    #+end_src
+
+- Combinação de todos:
+  Os seletores podem ser combinados de forma a criar regras mais complexas. O exemplo abaixo seleciona todo elemento ~<p>~ de classe ~my-para~ que está logo após uma ~<img>~ que está dentro da tag ~<body>~.
+  #+begin_src css
+    body img + p.my-para {
+        font-size: 12px;
+    }
+  #+end_src
+
+* Box Model
+Todos os elementos possuem uma "caixa" em volta deles. Esta caixa possue algumas propriedades importantes para se compreender como criar layouts em CSS e alinhar elementos.
+
+[[file:imagens/box-model.png]]
+
+Na imagem, o conteúdo do elemento está em azul. O conteúdo é envolvido por uma borda. Entre a borda e o conteúdo há um "preenchimento" (/padding/). Entre a borda e um elemento adjacente, há a margem. O ~padding~, ~border~ e ~margin~ são propriedades que podem ser configuradas em CSS.

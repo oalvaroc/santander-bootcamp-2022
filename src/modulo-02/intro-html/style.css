@@ -1,0 +1,57 @@
+body {
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+#page-header {
+    background: #f7f8fa;
+    padding: 2em;
+}
+
+#page-header-img {
+    width: 30%;
+    float: left;
+}
+
+#post-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.post {
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+footer {
+    font-size: 12px;
+}
+
+#contacts-list {
+    list-style-type: "> ";
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

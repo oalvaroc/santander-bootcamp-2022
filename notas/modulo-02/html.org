@@ -1,0 +1,39 @@
+#+title: Html
+
+O HTML é uma linguagem de marcação que surgiu em 1991. Foi criada por Tim Berners-Lee quando ele trabalhava no CERN. É utilizado para estruturar páginas da Web.
+
+* Estrutura básica
+Basicamente, um documento HTML segue a seguinte estrutura:
+
+#+begin_src html
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Elementos lidos pelo navegador, como o tipo de codificação de caracteres, o título da página, scripts e folha de estilos para carregar, etc. -->
+  </head>
+  <body>
+    <!-- Contém os elementos visuais, como cabeçalhos, parágrafos, imagens, vídeos, etc. -->
+  </body>
+</html>
+#+end_src
+
+* Semântica
+Os elementos HTML apropriados devem ser usados para dar o significado, função e aparência corretos para as diferentes partes do documento. Isso é bom para melhorar o desempenho do site em motores de busca (SEO) e também facilita o uso de leitores de tela (acessibilidade), por exemplo.
+
+As /tags/ abaixo ajudam a manter a semântica do site:
+
+- ~<header>~: usado para representar conteúdo introdutório do site, como título com logo, campo de pesquisa, ...
+- ~<section>~: representa uma seção genérica da página. Deve conter um cabeçalho (~h2~, por exemplo). Usado quando não há um outro elemento com semântica mais específica para representar a seção.
+- ~<article>~: representa um ítem independente de conteúdo, como um /blog post/, uma notícia, um /widget/ ou /gadget/, ...
+- ~<aside>~: representa uma porção do documento cujo conteúdo está indiretamente relacionado com o conteúdo principal. Geralmente são apresentados como barras laterais.
+- ~<footer>~: representa o rodapé da seção que o contém. Possui informações sobre o autor, /copyright/ e/ou /links/ para outros documentos.
+
+Outras /tags/ importantes no HTML são:
+
+- ~<p>~: representa um parágrafo, um bloco de texto separado de outros por espaço em branco, podendo ter indentação na primeira linha. Esta /tag/ também pode ser usada para agrupar itens que não são texto.
+- ~<a>~: elemento âncora, que cria um /link/ para a URL indicada no seu atributo /href/.
+- ~<img>~: inclui uma imagem no documento. Possui dois atributos: o /src/, que indica o caminho para o arquivo da imagem, e /alt/, que é um texto que descreve a imagem. O /alt text/ é muito importante para a acessibilidade, já que é lido pelos leitores de tela. Esse texto também pode aparecer caso a imagem não seja carregada devido uma falha.
+- Listas:
+  - ~<ol>~: lista ordenada. Utilizada quando a ordem dos itens importa.
+  - ~<ul>~: lista não ordenada. Utilizada quando a ordem dos itens não é importante.
+  - ~<li>~: o item da lista em si. Esta /tag/ é envolvida por uma das /tags/ anteriores.
